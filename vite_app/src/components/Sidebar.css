@@ -1,7 +1,7 @@
 .container1{
     background-color: rgb(50, 48, 48);
     width: 16vw;
-    height: 100vh;
+    height: 105vh;
 
 }
 .logo{
@@ -27,6 +27,38 @@
     margin-left: 4.5vw;
     margin-top: -3.2vh;
 }
+.text1:hover{
+    color: rgb(201, 198, 198);
+}
+.text2:hover{
+    color: rgb(201, 198, 198);
+}
+.text3:hover{
+    color: rgb(201, 198, 198);
+}
+.text4:hover{
+    color: rgb(201, 198, 198);
+}
+.text5:hover{
+    color: rgb(201, 198, 198);
+}
+.text6:hover{
+    color: rgb(201, 198, 198);
+}
+.text7:hover{
+    color: rgb(201, 198, 198);
+}
+.text8:hover{
+    color: rgb(201, 198, 198);
+}
+.text9:hover{
+    color: rgb(201, 198, 198);
+}
+.text10:hover{
+    color: rgb(201, 198, 198);
+}
+
+
 .img02{
     margin-left: 1.5vw;margin-top: .7vh;
 }
@@ -125,13 +157,16 @@
 }
 
 .img011{
-    margin-left: 1.5vw;margin-top: vh;
+    margin-left: 1.5vw;margin-top: .5vh;
 }
 .text11{
       color:white;
-      font-size: .9em;
+      font-size: 1em;
       margin-left: 4.5vw;
       margin-top: -3.4vh;
+}
+.text16:hover{
+    color: rgb(201, 198, 198);
 }
 .img012{
     margin-left: 1.5vw;margin-top: 3vh;
@@ -174,7 +209,7 @@
 }
 .text16{
       color:white;
-      font-size: .9em;
+      font-size: 1em;
       margin-left: 4.5vw;
       margin-top: -3.4vh;
 }

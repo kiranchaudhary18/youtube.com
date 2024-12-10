@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../1 to 35 que solution"
+		},
+		{
+			"path": "../../../../react"
+		},
+		{
+			"path": "../../../../youtube1.clone"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../react-2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "API"
+	}
+}
