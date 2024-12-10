@@ -22,9 +22,12 @@ function Playcontrols(){
 
 
     const [images,setimages]=useState([]);
+
+    
+
     useEffect(() => {
         
-        fetch('http://localhost:3000/grid')
+        fetch('https://api-2-woql.onrender.com/grid')
         .then((response) =>response.json())
         .then((data) => setimages(data))
 
@@ -32,7 +35,7 @@ function Playcontrols(){
     });
 
 
-
+    const [searchTerm,setSearchTerm]=useState([]);
 
 
     return(
@@ -41,7 +44,16 @@ function Playcontrols(){
         
         <div className="rightside">
                 <div className="rightfirst">
-                    <div className="search"><div className="searchtxt">Search</div><div className="searchimg"><img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/search.png?raw=true" alt="" /></div></div>
+                    <div className="search">
+
+                    <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search"
+    />
+
+                    <div className="searchimg"><img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/search.png?raw=true" alt="" /></div></div>
                     <div className="mic"><img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/mic.png?raw=true" alt="" /></div>
                     <div className="rightbar">
                         <img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/create.png?raw=true" alt="" className="create" />
@@ -105,3 +117,114 @@ function Playcontrols(){
 }
 
 export default Playcontrols
+
+
+// import React, { useEffect, useState } from 'react';
+// import './Playcontrols.css';
+
+// function Playcontrols() {
+//     const [videos, setVideos] = useState([]);
+//     const API_KEY = 'AIzaSyD5EBoyQSStDqDNgbHwtw3YIX0alMWcTkY';
+//     const SEARCH_QUERY = 'music'; // Modify this to fetch videos for different queries
+//     const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
+
+//     useEffect(() => {
+//         // Fetch videos from YouTube API
+//         const fetchVideos = async () => {
+//             try {
+//                 const response = await fetch(
+//                     `${BASE_URL}?part=snippet&maxResults=10&q=${SEARCH_QUERY}&key=${API_KEY}`
+//                 );
+//                 const data = await response.json();
+
+//                 if (response.ok) {
+//                     const videoList = data.items.map((item) => ({
+//                         id: item.id.videoId,
+//                         title: item.snippet.title,
+//                         description: item.snippet.description,
+//                         thumbnail: item.snippet.thumbnails.medium.url,
+//                         channelTitle: item.snippet.channelTitle,
+//                     }));
+//                     setVideos(videoList);
+//                 } else {
+//                     console.error('Error fetching data:', data.error);
+//                 }
+//             } catch (error) {
+//                 console.error('Error:', error);
+//             }
+//         };
+
+//         fetchVideos();
+//     }, []);
+//     const [searchTerm,setSearchTerm]=useState([]);
+
+//     return (
+//         <div className="rightside">
+
+
+// {/* <div className="rightside"> */}
+//                  <div className="rightfirst">
+//                      <div className="search">
+                                 
+//   <input
+//         type="text"
+//         value={searchTerm}
+//         onChange={(e) => setSearchTerm(e.target.value)}
+//         placeholder="Search"
+//     />
+//     <submit type="submit"
+//                       className="searchimg"><img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/search.png?raw=true" alt="" />
+//                      </submit>
+//                      </div>
+                    
+//                      <div className="mic"><img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/mic.png?raw=true" alt="" /></div>
+//                      <div className="rightbar">
+//                          <img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/create.png?raw=true" alt="" className="create" />
+//                          <img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/more.png?raw=true" alt="" className="create" />
+//                          <img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/bell.png?raw=true" alt="" className="create" />
+//                          {/* <img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/create.png?raw=true" alt="" className="create" /> */}
+//                          <div className="photo" >
+//                          </div>
+                        
+//                          </div>
+//                  </div>
+
+//                  <hr className="hr4"/>
+//                  <div className="li">
+
+//                   <p className="libar1">All</p> 
+//                    <p className="libar2">Cook Studio</p> 
+//                    <p className="libar3">UX</p> 
+//                     <p className="libar2">Case Study</p> 
+//                    <p className="libar4">music</p> 
+//                     <p className="libar2">Bnagla Lofi</p>                   <p className="libar4">Tour</p> 
+//                     <p className="libar2">Saintmartin</p> 
+//                     <p className="libar4">Tech</p> 
+//                     <p className="libar5">iphone 13</p>
+//                     <p className="libar6">User interface Design</p>  
+
+                    
+//                  </div>
+   
+//                  <hr className="hr5"/>
+
+
+
+
+
+//             <div className="main">
+//                 {videos.map((video) => (
+//                     <div className="card" key={video.id}>
+//                         <img src={video.thumbnail} alt={video.title} className="firstcard" />
+//                         <div className="cardflex">
+//                             <div className="cardtitle">{video.title}</div>
+//                         </div>
+//                         <div className="cardtxt">{video.channelTitle}</div>
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default Playcontrols;
